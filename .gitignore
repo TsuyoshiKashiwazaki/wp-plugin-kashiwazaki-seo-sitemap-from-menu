@@ -1,0 +1,5 @@
+# Temporary test files
+node_modules/
+check_sitemap.js
+package.json
+package-lock.json

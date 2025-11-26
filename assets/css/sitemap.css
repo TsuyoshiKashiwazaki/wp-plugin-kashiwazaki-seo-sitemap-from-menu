@@ -1,0 +1,153 @@
+/**
+ * Kashiwazaki SEO Sitemap from Menu - Stylesheet
+ */
+
+.kashiwazaki-seo-sitemap-from-menu {
+    margin: 1.5em 0;
+    padding: 0;
+}
+
+/* 通常リストスタイル */
+.kashiwazaki-seo-sitemap-from-menu-list {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-list.kashiwazaki-seo-sitemap-from-menu-level-0 {
+    padding-left: 1.5em;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-item {
+    margin: 0.5em 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-item a {
+    text-decoration: none;
+    color: #0073aa;
+    transition: color 0.2s ease;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-item a:hover,
+.kashiwazaki-seo-sitemap-from-menu-item a:focus {
+    color: #005177;
+    text-decoration: underline;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-description {
+    display: block;
+    margin-top: 0.25em;
+    font-size: 0.875em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ディレクトリツリースタイル */
+.kashiwazaki-seo-sitemap-from-menu-tree-item {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tree-root {
+    margin-bottom: 5px;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tree-root a {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-prefix {
+    display: inline-block;
+    min-width: 20px;
+    color: #999;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tree-item a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tree-item a:hover,
+.kashiwazaki-seo-sitemap-from-menu-tree-item a:focus {
+    color: #005177;
+    text-decoration: underline;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tree-item .kashiwazaki-seo-sitemap-from-menu-description {
+    display: inline;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* ツールチップ */
+.kashiwazaki-seo-sitemap-from-menu-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-style: normal;
+    background-color: #0073aa;
+    color: #fff;
+    border-radius: 50%;
+    cursor: help;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+    min-width: 250px;
+    max-width: 350px;
+    padding: 10px 12px;
+    background-color: #333;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 6px;
+    z-index: 1000;
+    transition: opacity 0.2s, visibility 0.2s;
+    white-space: normal;
+    text-align: left;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.kashiwazaki-seo-sitemap-from-menu-tooltip:hover .kashiwazaki-seo-sitemap-from-menu-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* エラー表示 */
+.kashiwazaki-seo-sitemap-from-menu-error {
+    padding: 1em;
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    color: #856404;
+}

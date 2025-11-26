@@ -1,0 +1,122 @@
+# Japanese translation for Kashiwazaki SEO Sitemap from Menu
+# Copyright (C) 2024 Tsuyoshi Kashiwazaki
+# This file is distributed under the GPL v2 or later.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Kashiwazaki SEO Sitemap from Menu 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0900\n"
+"PO-Revision-Date: 2024-01-01 00:00+0900\n"
+"Last-Translator: Tsuyoshi Kashiwazaki\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Kashiwazaki SEO Sitemap from Menu"
+msgstr "Kashiwazaki SEO Sitemap from Menu"
+
+msgid "表示設定"
+msgstr "表示設定"
+
+msgid "サイトマップの表示設定をカスタマイズできます。"
+msgstr "サイトマップの表示設定をカスタマイズできます。"
+
+msgid "デフォルトメニュー"
+msgstr "デフォルトメニュー"
+
+msgid "-- 選択してください --"
+msgstr "-- 選択してください --"
+
+msgid "ショートコードでメニューを指定しない場合に使用されるデフォルトのメニューです。"
+msgstr "ショートコードでメニューを指定しない場合に使用されるデフォルトのメニューです。"
+
+msgid "リストスタイル"
+msgstr "リストスタイル"
+
+msgid "● 黒丸"
+msgstr "● 黒丸"
+
+msgid "○ 白丸"
+msgstr "○ 白丸"
+
+msgid "■ 四角"
+msgstr "■ 四角"
+
+msgid "なし"
+msgstr "なし"
+
+msgid "インデントサイズ"
+msgstr "インデントサイズ"
+
+msgid "子メニューのインデント幅を指定します。"
+msgstr "子メニューのインデント幅を指定します。"
+
+msgid "説明を表示"
+msgstr "説明を表示"
+
+msgid "メニューアイテムの説明を表示する"
+msgstr "メニューアイテムの説明を表示する"
+
+msgid "カスタムCSS"
+msgstr "カスタムCSS"
+
+msgid "サイトマップに適用するカスタムCSSを入力してください。"
+msgstr "サイトマップに適用するカスタムCSSを入力してください。"
+
+msgid "使い方"
+msgstr "使い方"
+
+msgid "以下のショートコードを固定ページや投稿に挿入してサイトマップを表示できます。"
+msgstr "以下のショートコードを固定ページや投稿に挿入してサイトマップを表示できます。"
+
+msgid "基本的な使い方"
+msgstr "基本的な使い方"
+
+msgid "デフォルトメニューを表示します。"
+msgstr "デフォルトメニューを表示します。"
+
+msgid "メニュー名を指定"
+msgstr "メニュー名を指定"
+
+msgid "指定したメニュー名（スラッグ）のサイトマップを表示します。"
+msgstr "指定したメニュー名（スラッグ）のサイトマップを表示します。"
+
+msgid "メニューロケーションを指定"
+msgstr "メニューロケーションを指定"
+
+msgid "指定したテーマロケーションに割り当てられているメニューを表示します。"
+msgstr "指定したテーマロケーションに割り当てられているメニューを表示します。"
+
+msgid "利用可能なメニュー"
+msgstr "利用可能なメニュー"
+
+msgid "メニュー名"
+msgstr "メニュー名"
+
+msgid "スラッグ"
+msgstr "スラッグ"
+
+msgid "メニューが登録されていません。"
+msgstr "メニューが登録されていません。"
+
+msgid "利用可能なメニューロケーション"
+msgstr "利用可能なメニューロケーション"
+
+msgid "ロケーション名"
+msgstr "ロケーション名"
+
+msgid "ロケーションID"
+msgstr "ロケーションID"
+
+msgid "メニューロケーションが登録されていません。"
+msgstr "メニューロケーションが登録されていません。"
+
+msgid "サイトマップ"
+msgstr "サイトマップ"
+
+msgid "メニューが見つかりません。"
+msgstr "メニューが見つかりません。"
