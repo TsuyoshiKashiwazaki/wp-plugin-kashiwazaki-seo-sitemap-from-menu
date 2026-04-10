@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インストール・初期設定 - Kashiwazaki SEO Sitemap from Menu マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+<button class="hamburger-btn" aria-label="メニュー">&#9776;</button>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <h2 style="color:#fff;">Sitemap from Menu</h2>
+        <span class="version">v1.0.0</span>
+        <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+    </div>
+    <ul>
+        <li><a href="index.html">概要</a></li>
+        <li class="active"><a href="setup.html">インストール・初期設定</a></li>
+        <li><a href="sitemap-usage.html">サイトマップの使い方</a></li>
+        <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+    <h1>インストール・初期設定</h1>
+    <p class="lead">Kashiwazaki SEO Sitemap from Menu のインストール方法と、メニュー選択やリストスタイルなどの基本設定を説明します。</p>
+
+    <h2>インストール手順</h2>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-body">
+            <p>WordPress管理画面から <strong>プラグイン &gt; 新規追加</strong> に移動し、「Kashiwazaki SEO Sitemap from Menu」を検索します。または、プラグインのZIPファイルを <strong>プラグイン &gt; 新規追加 &gt; プラグインのアップロード</strong> からアップロードします。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-body">
+            <p>「今すぐインストール」をクリックし、インストール完了後「有効化」をクリックします。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-body">
+            <p>管理画面の左メニューに「Kashiwazaki SEO Sitemap from Menu」が追加されます。クリックして設定画面を開きます。</p>
+        </div>
+    </div>
+
+    <figure class="screenshot">
+        <img src="images/screenshots/00-menu-location.png" alt="管理画面メニューの位置" class="lightbox-trigger">
+        <figcaption>管理画面の左メニューにプラグインが追加されます</figcaption>
+    </figure>
+
+    <div class="callout callout-tip">
+        <div class="callout-title">ヒント</div>
+        <p>サイトマップを表示するには、事前にWordPressの <strong>外観 &gt; メニュー</strong> でナビゲーションメニューが作成されている必要があります。</p>
+    </div>
+
+    <h2>前提条件: ナビゲーションメニューの作成</h2>
+
+    <p>本プラグインはナビゲーションメニューの構造をもとにHTMLサイトマップを生成します。まだメニューを作成していない場合は、以下の手順で作成してください。</p>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-body">
+            <p>管理画面の <strong>外観 &gt; メニュー</strong> に移動します。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-body">
+            <p>メニュー名を入力し「メニューを作成」をクリックします。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-body">
+            <p>固定ページ、投稿、カテゴリ、カスタムリンクなどをメニューに追加し、ドラッグ&ドロップで階層構造を設定します。この階層構造がそのままサイトマップの構造になります。</p>
+        </div>
+    </div>
+
+    <div class="callout callout-note">
+        <div class="callout-title">補足</div>
+        <p>サイトマップ専用のメニューを別途作成することも可能です。サイトのナビゲーションメニューとは異なる構成でサイトマップを表示したい場合に便利です。</p>
+    </div>
+
+    <h2>基本設定</h2>
+
+    <h3>メニューの選択</h3>
+    <p>サイトマップのソースとなるナビゲーションメニューを選択します。WordPressに登録されているすべてのメニューがプルダウンで表示されます。</p>
+
+    <h3>リストスタイル</h3>
+    <p>サイトマップの表示スタイルを5種類から選択できます。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">スタイル</th>
+                <th>説明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>箇条書き（bullet）</td>
+                <td>標準的な黒丸の箇条書きリスト。最もシンプルで汎用的なスタイルです。</td>
+            </tr>
+            <tr>
+                <td>丸（circle）</td>
+                <td>白丸の箇条書きリスト。子階層との区別がつきやすいスタイルです。</td>
+            </tr>
+            <tr>
+                <td>四角（square）</td>
+                <td>四角マーカーの箇条書きリスト。視認性の高いスタイルです。</td>
+            </tr>
+            <tr>
+                <td>なし（none）</td>
+                <td>マーカーなしのリスト。インデントのみで階層を表現します。</td>
+            </tr>
+            <tr>
+                <td>ディレクトリツリー（directory tree）</td>
+                <td>ファイルシステムのツリー表示風のスタイル。階層構造が視覚的にわかりやすいスタイルです。</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h3>ツールチップ設定</h3>
+    <p>ツールチップ機能を有効にすると、サイトマップのリンクにマウスをホバーした際に、対象ページのメタ説明文がツールチップとして表示されます。以下のSEOプラグインのメタ説明文に対応しています。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">対応SEOプラグイン</th>
+                <th>取得するメタデータ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yoast SEO</td>
+                <td><code>_yoast_wpseo_metadesc</code> メタフィールドからメタ説明文を取得</td>
+            </tr>
+            <tr>
+                <td>All in One SEO</td>
+                <td><code>_aioseo_description</code> メタフィールドからメタ説明文を取得</td>
+            </tr>
+            <tr>
+                <td>Rank Math</td>
+                <td><code>rank_math_description</code> メタフィールドからメタ説明文を取得</td>
+            </tr>
+            <tr>
+                <td>SEOPress</td>
+                <td><code>_seopress_titles_desc</code> メタフィールドからメタ説明文を取得</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="callout callout-warning">
+        <div class="callout-title">注意</div>
+        <p>ツールチップが表示されるのは、上記SEOプラグインでメタ説明文が設定されているページのみです。メタ説明文が未設定のページではツールチップは表示されません。</p>
+    </div>
+
+    <nav class="page-nav">
+        <a href="index.html" class="prev">&laquo; 概要</a>
+        <a href="sitemap-usage.html" class="next">サイトマップの使い方 &raquo;</a>
+    </nav>
+
+    <footer class="manual-footer">
+        <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+        <p>プラグイン: Kashiwazaki SEO Sitemap from Menu v1.0.0</p>
+    </footer>
+</main>
+
+<div class="lightbox"></div>
+<script src="js/manual.js?v=1"></script>
+</body>
+</html>

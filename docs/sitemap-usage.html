@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイトマップの使い方 - Kashiwazaki SEO Sitemap from Menu マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+<button class="hamburger-btn" aria-label="メニュー">&#9776;</button>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <h2 style="color:#fff;">Sitemap from Menu</h2>
+        <span class="version">v1.0.0</span>
+        <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+    </div>
+    <ul>
+        <li><a href="index.html">概要</a></li>
+        <li><a href="setup.html">インストール・初期設定</a></li>
+        <li class="active"><a href="sitemap-usage.html">サイトマップの使い方</a></li>
+        <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+    <h1>サイトマップの使い方</h1>
+    <p class="lead">ショートコード <code>[menu_sitemap]</code> を使ったサイトマップの表示方法と、カスタムCSSによるスタイルカスタマイズについて解説します。</p>
+
+    <h2>ショートコードの基本</h2>
+
+    <p>固定ページまたは投稿にショートコード <code>[menu_sitemap]</code> を挿入するだけで、設定画面で選択したメニューのHTMLサイトマップが表示されます。</p>
+
+    <figure class="screenshot">
+        <img src="images/screenshots/02-sitemenu-detail.png" alt="HTMLサイトマップ設定" class="lightbox-trigger">
+        <figcaption>HTMLサイトマップの設定画面</figcaption>
+    </figure>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-body">
+            <p>サイトマップを表示したい固定ページ（例: 「サイトマップ」ページ）を作成または編集します。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-body">
+            <p>ブロックエディタの場合は「ショートコード」ブロックを追加し、クラシックエディタの場合はテキストモードで以下を入力します。</p>
+            <pre><code>[menu_sitemap]</code></pre>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-body">
+            <p>ページを公開または更新すると、設定画面で選択したメニューの階層構造がHTMLサイトマップとして表示されます。</p>
+        </div>
+    </div>
+
+    <div class="callout callout-tip">
+        <div class="callout-title">ヒント</div>
+        <p>サイトマップページは固定ページとして作成し、パーマリンクを <code>/sitemap/</code> に設定すると、ユーザーが見つけやすくなります。フッターやナビゲーションにリンクを追加することも推奨します。</p>
+    </div>
+
+    <h2>サイトマップの出力構造</h2>
+
+    <p>ショートコードは、ナビゲーションメニューの階層構造をネストされた <code>&lt;ul&gt;</code> / <code>&lt;li&gt;</code> タグで出力します。以下はディレクトリツリースタイルでの出力例です。</p>
+
+    <pre><code>&lt;div class="ksfm-sitemap ksfm-style-tree"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/about/" title="会社概要ページ"&gt;会社概要&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/about/team/"&gt;チーム紹介&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about/access/"&gt;アクセス&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="/blog/"&gt;ブログ&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact/"&gt;お問い合わせ&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+    <div class="callout callout-note">
+        <div class="callout-title">補足</div>
+        <p><code>title</code> 属性はツールチップが有効で、対象ページにSEOプラグインのメタ説明文が設定されている場合にのみ出力されます。</p>
+    </div>
+
+    <h2>リストスタイルの表示例</h2>
+
+    <p>設定画面で選択したリストスタイルに応じて、サイトマップの見た目が変わります。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">スタイル</th>
+                <th>表示特徴</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>箇条書き（bullet）</td>
+                <td>&#8226; で始まる標準的なリスト。どのテーマにも馴染むデフォルトスタイルです。</td>
+            </tr>
+            <tr>
+                <td>丸（circle）</td>
+                <td>&#9675; で始まるリスト。階層が深い場合にマーカーの変化で区別しやすくなります。</td>
+            </tr>
+            <tr>
+                <td>四角（square）</td>
+                <td>&#9632; で始まるリスト。視認性が高く、コーポレートサイトに適しています。</td>
+            </tr>
+            <tr>
+                <td>なし（none）</td>
+                <td>マーカーなし。インデントのみで階層を表現する、すっきりとしたデザインです。</td>
+            </tr>
+            <tr>
+                <td>ディレクトリツリー</td>
+                <td>罫線文字（├ └ │）を使ったファイルマネージャー風の表示。技術系サイトに人気です。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>ツールチップの動作</h2>
+
+    <p>ツールチップ機能が有効な場合、サイトマップのリンクにマウスカーソルを合わせると、対象ページのSEOメタ説明文がポップアップ表示されます。</p>
+
+    <p>ツールチップは以下の優先順位でメタ説明文を取得します。</p>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-body">
+            <p>Yoast SEO のメタ説明文 (<code>_yoast_wpseo_metadesc</code>)</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-body">
+            <p>All in One SEO のメタ説明文 (<code>_aioseo_description</code>)</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-body">
+            <p>Rank Math のメタ説明文 (<code>rank_math_description</code>)</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">4</span>
+        <div class="step-body">
+            <p>SEOPress のメタ説明文 (<code>_seopress_titles_desc</code>)</p>
+        </div>
+    </div>
+
+    <div class="callout callout-note">
+        <div class="callout-title">補足</div>
+        <p>ツールチップはHTML標準の <code>title</code> 属性を使用しています。CSSやJavaScriptによるカスタムツールチップではないため、ブラウザのネイティブ表示に依存します。</p>
+    </div>
+
+    <h2>カスタムCSS</h2>
+
+    <p>設定画面の「カスタムCSS」欄に任意のCSSを入力することで、サイトマップの見た目をカスタマイズできます。</p>
+
+    <p>カスタムCSSの記述例:</p>
+
+    <pre><code>/* サイトマップのリンク色を変更 */
+.ksfm-sitemap a {
+    color: #0073aa;
+}
+
+/* サイトマップのリンクホバー時の装飾 */
+.ksfm-sitemap a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* 階層のインデント幅を調整 */
+.ksfm-sitemap ul ul {
+    margin-left: 24px;
+}</code></pre>
+
+    <div class="callout callout-warning">
+        <div class="callout-title">注意</div>
+        <p>カスタムCSSは設定画面に入力した内容がそのままフロントエンドに出力されます。構文エラーがあるとサイト全体のレイアウトに影響する可能性があるため、慎重に記述してください。</p>
+    </div>
+
+    <nav class="page-nav">
+        <a href="setup.html" class="prev">&laquo; インストール・初期設定</a>
+        <a href="troubleshooting.html" class="next">トラブルシューティング &raquo;</a>
+    </nav>
+
+    <footer class="manual-footer">
+        <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+        <p>プラグイン: Kashiwazaki SEO Sitemap from Menu v1.0.0</p>
+    </footer>
+</main>
+
+<div class="lightbox"></div>
+<script src="js/manual.js?v=1"></script>
+</body>
+</html>

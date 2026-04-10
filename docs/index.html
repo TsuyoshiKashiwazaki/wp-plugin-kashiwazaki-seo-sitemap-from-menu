@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>概要 - Kashiwazaki SEO Sitemap from Menu マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+<button class="hamburger-btn" aria-label="メニュー">&#9776;</button>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <h2 style="color:#fff;">Sitemap from Menu</h2>
+        <span class="version">v1.0.0</span>
+        <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+    </div>
+    <ul>
+        <li class="active"><a href="index.html">概要</a></li>
+        <li><a href="setup.html">インストール・初期設定</a></li>
+        <li><a href="sitemap-usage.html">サイトマップの使い方</a></li>
+        <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+    <h1>Kashiwazaki SEO Sitemap from Menu マニュアル</h1>
+    <img src="images/main-visual.png" alt="Kashiwazaki SEO Sitemap from Menu メインビジュアル" style="width:100%;border-radius:6px;margin-bottom:16px;">
+    <p class="lead">Kashiwazaki SEO Sitemap from Menu は、WordPressのナビゲーションメニューからHTML形式のサイトマップを自動生成するプラグインです。5種類のリストスタイルとSEOプラグイン連携のツールチップ機能を備え、ショートコード <code>[menu_sitemap]</code> で簡単にサイトマップを表示できます。</p>
+
+    <p>HTMLサイトマップは、XMLサイトマップを補完しユーザーにサイト全体の構造を提示するページです。本プラグインはWordPressのナビゲーションメニューからHTMLサイトマップを自動生成し、5種類のリストスタイルとツールチップ表示に対応します。</p>
+
+    <h2>主な機能</h2>
+
+    <div class="feature-cards">
+        <div class="feature-card">
+            <span class="icon">&#128506;</span>
+            <h4>HTMLサイトマップ</h4>
+            <p>ナビゲーションメニューからHTMLサイトマップを自動生成</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#127912;</span>
+            <h4>5スタイル</h4>
+            <p>箇条書き・丸・四角・なし・ディレクトリツリーの5種類のリストスタイル</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#128172;</span>
+            <h4>ツールチップ</h4>
+            <p>SEOプラグインのメタ説明文をホバー時にツールチップで表示</p>
+        </div>
+    </div>
+
+    <h2>プラグインの特長</h2>
+
+    <ul>
+        <li>ナビゲーションメニューの階層構造をそのままHTMLサイトマップとして出力</li>
+        <li>5種類のリストスタイル（箇条書き・丸・四角・なし・ディレクトリツリー）に対応</li>
+        <li>Yoast SEO、All in One SEO、Rank Math、SEOPressのメタ説明文をツールチップで表示</li>
+        <li>カスタムCSS入力によるスタイルのカスタマイズが可能</li>
+        <li>ショートコード <code>[menu_sitemap]</code> で任意のページにサイトマップを挿入</li>
+        <li>フロントエンド: CSSのみ（3.4KB）、JavaScriptなし</li>
+        <li>AJAXなし、JSON-LDなし、メタタグなし — 軽量でシンプルな設計</li>
+    </ul>
+
+    <figure class="infographic">
+        <img src="images/infographics/overview-flow.png" alt="プラグイン概要フロー図">
+        <figcaption>Kashiwazaki SEO Sitemap from Menu の全体フロー</figcaption>
+    </figure>
+
+    <h2>SEO・GEO（生成AI最適化）への効果</h2>
+
+    <h3>XMLサイトマップとの補完関係</h3>
+    <p>HTMLサイトマップは、XMLサイトマップを補完する役割を果たします。XMLサイトマップが検索エンジンのクローラー向けであるのに対し、HTMLサイトマップはユーザーが目視でサイト全体の構造を把握できるナビゲーションを提供します。両方を併用することで、クローラビリティとユーザビリティの両方を向上させます。</p>
+
+    <h3>ナビゲーション階層との一致</h3>
+    <p>メニューベースの生成により、HTMLサイトマップは実際のナビゲーション階層と常に一致します。メニューを更新すれば自動的にサイトマップも更新されるため、手動でサイトマップを管理する必要がありません。</p>
+
+    <h3>直帰率の低減</h3>
+    <p>ツールチップでページの説明文を表示することで、ユーザーがリンク先の内容を事前に把握できます。これにより、期待と異なるページへの遷移を防ぎ、直帰率の低減につながります。</p>
+
+    <h3>SEOプラグインとの連携</h3>
+    <p>Yoast SEO、All in One SEO、Rank Math、SEOPressのメタ説明文を自動取得し、ツールチップとして表示します。SEOプラグインで設定したメタデータを最大限に活用し、一貫性のあるサイト情報を提供します。</p>
+
+    <h3>生成AI（GEO）への対応</h3>
+    <p>HTMLサイトマップは、AIにサイト全体のコンテンツ構造を構造化された形式で提供します。階層的なリンク一覧により、LLMベースのシステムがサイトのトピック構造や重要ページを効率的に把握できます。</p>
+
+    <h2>目次（マニュアル構成）</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">ページ</th>
+                <th>内容</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="index.html">概要</a></td>
+                <td>プラグインの機能概要、SEO/GEO効果、動作要件</td>
+            </tr>
+            <tr>
+                <td><a href="setup.html">インストール・初期設定</a></td>
+                <td>インストール手順、メニュー選択、リストスタイル設定</td>
+            </tr>
+            <tr>
+                <td><a href="sitemap-usage.html">サイトマップの使い方</a></td>
+                <td>ショートコードの使い方、ツールチップ設定、カスタムCSS</td>
+            </tr>
+            <tr>
+                <td><a href="troubleshooting.html">トラブルシューティング</a></td>
+                <td>よくある問題と対処法、動作要件、技術仕様、アーキテクチャ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>動作要件</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">項目</th>
+                <th>要件</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WordPress</td>
+                <td>5.0 以上</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>7.4 以上</td>
+            </tr>
+            <tr>
+                <td>対応ブラウザ</td>
+                <td>Chrome、Firefox、Safari、Edge（最新版）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="callout callout-tip">
+        <div class="callout-title">ヒント</div>
+        <p>インストール後すぐに使い始めたい場合は、<a href="setup.html">インストール・初期設定</a>ページに進んでください。</p>
+    </div>
+
+    <nav class="page-nav">
+        <span></span>
+        <a href="setup.html" class="next">インストール・初期設定 &raquo;</a>
+    </nav>
+
+    <footer class="manual-footer">
+        <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+        <p>プラグイン: Kashiwazaki SEO Sitemap from Menu v1.0.0</p>
+    </footer>
+</main>
+
+<div class="lightbox"></div>
+<script src="js/manual.js?v=1"></script>
+</body>
+</html>

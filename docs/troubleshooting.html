@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トラブルシューティング - Kashiwazaki SEO Sitemap from Menu マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+<button class="hamburger-btn" aria-label="メニュー">&#9776;</button>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <h2 style="color:#fff;">Sitemap from Menu</h2>
+        <span class="version">v1.0.0</span>
+        <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+    </div>
+    <ul>
+        <li><a href="index.html">概要</a></li>
+        <li><a href="setup.html">インストール・初期設定</a></li>
+        <li><a href="sitemap-usage.html">サイトマップの使い方</a></li>
+        <li class="active"><a href="troubleshooting.html">トラブルシューティング</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+    <h1>トラブルシューティング</h1>
+    <p class="lead">Kashiwazaki SEO Sitemap from Menu の使用中に発生しうる問題と対処法、動作要件、技術仕様について解説します。</p>
+
+    <h2>よくある問題と対処法</h2>
+
+    <h3>サイトマップが表示されない</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">考えられる原因</th>
+                <th>対処法</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>プラグインが有効化されていない</td>
+                <td>管理画面の「プラグイン」一覧で、本プラグインが有効になっていることを確認してください。</td>
+            </tr>
+            <tr>
+                <td>ナビゲーションメニューが作成されていない</td>
+                <td><strong>外観 &gt; メニュー</strong> でナビゲーションメニューが作成されているか確認してください。メニューが1つも存在しない場合、サイトマップは出力されません。</td>
+            </tr>
+            <tr>
+                <td>設定でメニューが選択されていない</td>
+                <td>プラグインの設定画面で、サイトマップのソースとなるメニューが正しく選択されているか確認してください。</td>
+            </tr>
+            <tr>
+                <td>ショートコードの記述ミス</td>
+                <td>ショートコードが <code>[menu_sitemap]</code> と正しく記述されているか確認してください。ブロックエディタの場合は「ショートコード」ブロックを使用してください。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>ツールチップが表示されない</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">考えられる原因</th>
+                <th>対処法</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ツールチップ機能が無効になっている</td>
+                <td>プラグインの設定画面でツールチップ機能が有効になっているか確認してください。</td>
+            </tr>
+            <tr>
+                <td>SEOプラグインがインストールされていない</td>
+                <td>Yoast SEO、All in One SEO、Rank Math、SEOPressのいずれかがインストール・有効化されている必要があります。</td>
+            </tr>
+            <tr>
+                <td>メタ説明文が設定されていない</td>
+                <td>対象ページのSEOプラグインの設定で、メタ説明文が入力されているか確認してください。メタ説明文が空のページではツールチップは表示されません。</td>
+            </tr>
+            <tr>
+                <td>メニュー項目がカスタムリンクである</td>
+                <td>カスタムリンク（外部URLなど）にはSEOプラグインのメタデータが存在しないため、ツールチップは表示されません。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>サイトマップのスタイルが崩れる</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">考えられる原因</th>
+                <th>対処法</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>テーマのCSSとの競合</td>
+                <td>ブラウザの開発者ツールで、テーマのCSSがサイトマップのスタイルを上書きしていないか確認してください。カスタムCSSで上書きすることも可能です。</td>
+            </tr>
+            <tr>
+                <td>カスタムCSSの構文エラー</td>
+                <td>設定画面に入力したカスタムCSSに構文エラーがないか確認してください。不要な記述を削除して動作を確認してください。</td>
+            </tr>
+            <tr>
+                <td>キャッシュプラグインの影響</td>
+                <td>キャッシュプラグインのキャッシュをクリアしてから表示を確認してください。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>ディレクトリツリースタイルの罫線が文字化けする</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">考えられる原因</th>
+                <th>対処法</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>文字エンコーディングの問題</td>
+                <td>サイトの文字エンコーディングがUTF-8に設定されていることを確認してください。<code>&lt;meta charset="UTF-8"&gt;</code> がHTMLの <code>&lt;head&gt;</code> 内に記述されているか確認します。</td>
+            </tr>
+            <tr>
+                <td>フォントが罫線文字に対応していない</td>
+                <td>等幅フォント（monospace）またはシステムフォントを使用してください。カスタムCSSで <code>font-family</code> を調整できます。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="callout callout-tip">
+        <div class="callout-title">ヒント</div>
+        <p>問題が解決しない場合は、一度プラグインを無効化してから再有効化してみてください。設定値はデータベースに保持されるため、再有効化後も設定は維持されます。</p>
+    </div>
+
+    <h2>動作要件</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width:35%;">項目</th>
+                <th>要件</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WordPress</td>
+                <td>5.0 以上</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>7.4 以上</td>
+            </tr>
+            <tr>
+                <td>対応ブラウザ</td>
+                <td>Chrome、Firefox、Safari、Edge（最新版）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>技術仕様</h2>
+
+    <ul>
+        <li><strong>データ保存:</strong> wp_options (kashiwazaki_seo_sitemap_from_menu_options)</li>
+        <li><strong>カスタムテーブル:</strong> なし</li>
+        <li><strong>外部通信:</strong> なし</li>
+        <li><strong>Cronイベント:</strong> なし</li>
+        <li><strong>メール送信:</strong> なし</li>
+        <li><strong>セキュリティ:</strong> nonce検証、manage_options権限チェック、入出力サニタイズ</li>
+    </ul>
+
+    <h2>アーキテクチャ</h2>
+
+    <p>Kashiwazaki SEO Sitemap from Menu は以下のコンポーネントで構成されています。</p>
+
+    <h3>フロントエンド</h3>
+    <ul>
+        <li>CSSのみ（約3.4KB）で5種類のリストスタイルを実装</li>
+        <li>JavaScriptは一切使用せず、Core Web Vitalsへの影響をゼロに</li>
+        <li>ツールチップはHTML標準の <code>title</code> 属性で実装（追加のJSライブラリ不要）</li>
+    </ul>
+
+    <h3>バックエンド</h3>
+    <ul>
+        <li>設定データは <code>wp_options</code> テーブルに <code>kashiwazaki_seo_sitemap_from_menu_options</code> キーで一元管理</li>
+        <li>ナビゲーションメニューの取得には WordPress標準の <code>wp_get_nav_menu_items()</code> を使用</li>
+        <li>SEOプラグインのメタデータは <code>get_post_meta()</code> で取得</li>
+        <li>すべてのフォーム送信に nonce 検証を実施</li>
+    </ul>
+
+    <h3>サイトマップ生成フロー</h3>
+
+    <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-body">
+            <p>ショートコード <code>[menu_sitemap]</code> がパースされ、設定画面で選択されたメニューIDを取得します。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-body">
+            <p><code>wp_get_nav_menu_items()</code> でメニュー項目を取得し、親子関係に基づいて階層構造を構築します。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-body">
+            <p>ツールチップが有効な場合、各メニュー項目に紐づくページのSEOメタ説明文を <code>get_post_meta()</code> で取得します。</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <span class="step-number">4</span>
+        <div class="step-body">
+            <p>選択されたリストスタイルに応じたCSSクラスを適用し、ネストされた <code>&lt;ul&gt;</code> / <code>&lt;li&gt;</code> タグのHTMLを生成・出力します。</p>
+        </div>
+    </div>
+
+    <div class="callout callout-note">
+        <div class="callout-title">補足</div>
+        <p>カスタムテーブル、Cronイベント、外部通信は一切使用しないため、プラグインの削除時にデータベースに不要なデータが残ることはありません。<code>wp_options</code> の設定値のみが削除対象です。</p>
+    </div>
+
+    <nav class="page-nav">
+        <a href="sitemap-usage.html" class="prev">&laquo; サイトマップの使い方</a>
+        <span></span>
+    </nav>
+
+    <footer class="manual-footer">
+        <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+        <p>プラグイン: Kashiwazaki SEO Sitemap from Menu v1.0.0</p>
+    </footer>
+</main>
+
+<div class="lightbox"></div>
+<script src="js/manual.js?v=1"></script>
+</body>
+</html>
